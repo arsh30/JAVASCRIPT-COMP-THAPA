@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: aquamarine;
+    }
+    p {
+      text-align: center;
+      color: black;
+      font-weight: 600;
+      font-style: italic;
+    }
+    h1 {
+      text-align: center;
+      color: black;
+      font-weight: 600;
+      font-style: italic;
+    }
+    button {
+      text-align: center;
+      width: 100px;
+      margin-left: 50%;
+      background-color: rgb(178, 178, 125);
+      color: white;
+    }
+  </style>
+  <body>
+    <p class="para">Plz like the video</p>
+    <p class="para">Plz share the video</p>
+    <p class="para">Dont forget to subscribe</p>
+    <h1 id="heading">Change the content of the H1</h1>
+    <button onclick="changeContent()">click me</button>
+
+    <script>
+      function changeContent() {
+        // 1. way of accessing by refrencing means kisi variable me store krliya
+        // let heading = document.getElementById("heading");
+        // heading.innerHTML = "This is me Arsh";
+
+        // 2 way to access this by chaiing
+        // document.getElementById("heading").innerHTML = "This is Arshdeep";
+
+        // If we deal with classes
+        // console.log(document.getElementsByClassName("para"));
+
+        // If deal with tag Name
+        // console.log(document.getElementsByTagName("p"));
+
+        // getElementByName -> it is used for named attributes
+        
+        // We can do the above operations with same query Selector
+        // querySelector return the first matched element whereas
+        // queryselectorall() will return all the elements 
+
+        // document.querySelector("#heading").innerHTML=  "I changed again"; 
+        // agr class access krege to . lgaege and id access ke liye #idname
+        // aand agr tag access krna hai to kuch bhi nhi lgaege direct taag name dega
+        
+
+        // Interview Ques ?
+        // Diff betwen getElementId and query Selctor
+        // getElementById -> it only access the id
+        // query Selector -> It access the first match element
+
+        // note -> agr by chnce class ke andr ka kch chaiye to space denge krege
+        // space means uske andr ka nextElement 
+    }
+    </script>
+  </body>
+</html>

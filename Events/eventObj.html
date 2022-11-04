@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evnet Object</title>
+  </head>
+  <body>
+    <div class="button_su">
+      <span class="su_button_circle"></span>
+      <a href="#" class="button_su_inner">
+        <span class="button_text_container" id="fourthWay">Inline Event</span>
+      </a>
+    </div>
+
+    <button>Event Listners</button>
+
+    <script>
+      let eventObj = document.querySelector("#fourthWay");
+      // Note: jabhi kisi btn pr click krre to ik event happen hora hai
+      // jabhi event fire hota hai means uska ik parent hai ie "event Object"
+      // event iske andr sabkuch hoga sare events bhi
+
+      const checkEvent = () => {
+        console.log(event); // parent Object ie event , we can check the source element , target
+        console.log(event.target);
+        console.log(event.type); // means hamara event konsa hai
+      };
+      eventObj.addEventListener("click", checkEvent); // 3rd parameter is bubbling, bydefault it is true [Note]
+    </script>
+  </body>
+</html>

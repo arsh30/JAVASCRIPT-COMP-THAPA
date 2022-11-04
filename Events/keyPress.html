@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>keyPress</title>
+  </head>
+  <body>
+    <div class="main-div">
+      <div>
+        <p>
+          A function is triggered when the user is pressing a key in input field
+        </p>
+        <br />
+        <input
+          type="text"
+          class="effect1"
+          onkeypress="keyPress()"
+          onkeydown="keyDown()"
+          onkeyup="keyUp()"
+        />
+        <br />
+      </div>
+      <p id="keys"></p>
+      <!-- is paragraph me data dikhana hai -->
+    </div>
+
+    <script>
+      //   const keyPress = () => {
+      //         //  keyPress basically is event se pta lag jata hai ki konse key press krre hai
+      //     document.getElementById(
+      //       "keys"
+      //     ).innerHTML = `you press ${event.key} and its code is ${event.code}`;
+      //   };
+
+    //   const keyUp = () => {
+    //     // basically this event fire when we type anything
+    //     document.getElementById("keys").innerHTML = `key is up`;
+    //   };
+
+    //   const keyDown = () => {
+    //     // basically this event fire when we delete anyCharacter or hath htaege keyboard se to it will fire, from input field
+    //     document.getElementById("keys").innerHTML = `Key is Down`;
+    //   };
+    </script>
+  </body>
+</html>

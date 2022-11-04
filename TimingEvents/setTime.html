@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div className="main-div">
+      <div>
+        <p>want to know my name</p>
+        <p id="showMyName"></p>
+        <br />
+
+        <button id="btn">Click here</button>
+      </div>
+    </div>
+
+    <script>
+      let btn = document.querySelector("#btn");
+      let myName = document.getElementById("showMyName");
+      const showMyName = () => {
+        myName.innerHTML = `Loading....`; // pehle yeh show hoga then niche wala show hojega
+        setTimeout(() => {
+          myName.innerHTML = `Your name is Arshdeep Singh`;
+        }, 4000);
+
+        console.log("Hello this is SetTimeOut");
+        // setTimeout is asyncronous means background me hota rhega uske niche ka code first execute hojega
+      };
+      btn.addEventListener("click", showMyName);
+    </script>
+  </body>
+</html>

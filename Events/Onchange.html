@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onchange.html</title>
+  </head>
+  <body>
+    <div class="main-div">
+      <div>
+        <label for="">Your name</label>
+        <input type="text" name="" id="ice" />
+        <br />
+
+        <label
+          >choose ice flavour
+          <select name="iceCreams" id="iceCreams" onchange="selectElement()">
+            <option value="">Select One</option>
+            <option value="chocolate">Chocolate</option>
+            <option value="vanila">Vanila</option>
+            <option value="sardine">Sardine</option>
+          </select>
+        </label>
+        <br />
+        <div id="result"></div>
+      </div>
+    </div>
+    <script>
+      const selectElement = () => {
+        const inputChange = document.getElementById("ice").value;
+        const iceCream = document.getElementById("iceCreams").value;
+        // Note: input box me type kya krre hai to ".value" likhege
+
+        // Jo data milra hai usko simply result me add krdege
+        const res = document.getElementById("result");
+        res.innerHTML = `Your input Box value is ${inputChange} and your iceCream flavour is ${iceCream}`;
+      };
+    </script>
+  </body>
+</html>

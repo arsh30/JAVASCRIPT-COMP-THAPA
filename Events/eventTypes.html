@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4 ways of writting an Event</title>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Different Event types in JS</h1>
+      <div class="butotn_container">
+        <div class="button_su">
+          <span class="su_button_circle"></span>
+          <a
+            href="#"
+            class="button_su_inner"
+            onclick="alert('I am Arshdeep Singh')"
+          >
+            <span class="button_text_container">simple inline alert()</span>
+          </a>
+        </div>
+
+        <!-- 2nd way by calling a function [very usefull]-->
+        <div class="button_su">
+          <span class="su_button_circle"></span>
+          <a href="#" class="button_su_inner" onclick="callingFunction()">
+            <span class="button_text_container">By calling a function</span>
+          </a>
+        </div>
+
+        <!-- 3rd way -->
+        <div class="button_su">
+          <span class="su_button_circle"></span>
+          <a href="#" class="button_su_inner">
+            <span class="button_text_container" id="thirdWay"
+              >Inline Event</span
+            >
+          </a>
+        </div>
+
+        <!-- 3rd way -->
+        <div class="button_su">
+          <span class="su_button_circle"></span>
+          <a href="#" class="button_su_inner">
+            <span class="button_text_container" id="fourthWay"
+              >Inline Event</span
+            >
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // 2nd way of writting function
+      const callingFunction = () => {
+        alert("most common function");
+      };
+
+      //   3rd way of wriitng Event, hmare pass onClick event nahi hai so how we access
+      // by using classes and id
+      const thirdWay = document.getElementById("thirdWay");
+      thirdWay.onclick = function () {
+        alert("most common way of writting function again 3rd part");
+      };
+
+      //   4th way of writting event- > IT is also very common
+      const fourthWay = document.getElementById("fourthWay");
+      fourthWay.addEventListener("click", () => {
+        alert("4 th way of writting this event");
+      });
+
+      //   Note -> 2 and 4 way is very common and most useful way
+      //   3 rd wala agr ik tym or likhege to vo overwrite hojega
+    </script>
+  </body>
+</html>

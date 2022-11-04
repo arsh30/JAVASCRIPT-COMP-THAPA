@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mouse Down Up</title>
+  </head>
+  <body>
+    <p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()">
+      click the text! the mouseDown() function is triggered whent the mouse
+      button is pressed down over this paragraph, and sets the color of the text
+      to red;
+    </p>
+  </body>
+  <script>
+    function mouseDown() {
+      document.getElementById("myP").style.color = "red";
+    }
+    // mouseDown event -> means jab tak hum click krke rakhege tab tak event happen hota rhega jese chorhege
+    // to mouseUp event chl jaega
+
+    function mouseUp() {
+      document.getElementById("myP").style.color = "blue";
+    }
+  </script>
+</html>

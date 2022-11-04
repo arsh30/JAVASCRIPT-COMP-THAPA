@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Best Jokes</h3>
+      <div class="joke" id="joke">Awesome joke is loading</div>
+      <button id="jokeBtn" class="btn">NextJoke</button>
+    </div>
+
+    <script>
+      //   const jokes = document.getElementById("joke");
+      //   const jokeBtn = document.getElementById("jokeBtn");
+
+      //   Promises
+      // GET https://icanhazdadjoke.com/
+
+      // const setHeader = {
+      //   headers: {
+      //     Accept: "application/json",
+      //   },
+      // };
+      // const generateJokes = () => {
+      //   fetch("https://icanhazdadjoke.com/", setHeader)
+      //     .then((res) =>
+      //       //   console.log(res);
+      //       res.json()
+      //     )
+      //     .then((data) =>
+      //       // json me data milega
+      //       jokes.innerHTML = data.joke
+      //     )
+      //     .catch((err) => {
+      //       console.log(err);
+      //     });
+      // };
+
+      // jokeBtn.addEventListener("click", generateJokes);
+      // generateJokes(); // means bydefault khud se ik n ik joke show hora hoga
+
+      //   <!-- DO THIS WITH THE HELP OF ASYNC AWAIT  -->
+      const jokes = document.getElementById("joke");
+      const jokeBtn = document.getElementById("jokeBtn");
+
+      const setHeader = {
+        headers: {
+          Accept: "application/json",
+        },
+      };
+      const generateJokes = async () => {
+        try {
+          const res = await fetch("https://icanhazdadjoke.com/", setHeader);
+          const data = await res.json(); // json bhi promise return krta hai
+          jokes.innerHTML = data.joke;
+        } catch (err) {
+          console.log(`the error is ${err}`);
+        }
+      };
+
+      jokeBtn.addEventListener("click", generateJokes);
+      generateJokes();
+    </script>
+  </body>
+</html>

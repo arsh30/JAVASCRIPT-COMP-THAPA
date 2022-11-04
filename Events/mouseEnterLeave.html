@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mouseEnterLeave.html</title>
+  </head>
+  <body>
+    <div class="main-div">
+      <div id="box">Helllo this is main div</div>
+    </div>
+
+    <script>
+      const mEnter = document.getElementById("box");
+      mEnter.addEventListener("mouseenter", () => {
+        //  mouseenter means jese mouse ko enter krege iss div me to yeh event fire hojega
+        mEnter.style.backgroundColor = "red";
+        console.log("mouse enter bro");
+      });
+
+      mEnter.addEventListener("mouseleave", () => {
+        //  mouseenter means jese mouse ko leave krege iss div me to yeh event fire hojega
+        mEnter.style.backgroundColor = "pink";
+        console.log("mouse leave bro");
+      });
+    </script>
+  </body>
+</html>

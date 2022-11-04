@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clearTimeOut</title>
+  </head>
+  <body>
+    <div class="main-div">
+      <div>
+        <p>click try it wait 3 seconds, the page will alert "hello</p>
+        <p>click stop to prevent the first function to execute</p>
+        <p>You must have to click to stop before the 2 seconds up</p>
+
+        <button onclick="myVar = setTimeout(myFunction,2000)">try It</button>
+        <button onclick="clearTimeout(myVar)">stop it</button>
+      </div>
+    </div>
+
+    <script>
+      function myFunction() {
+        alert("Hello");
+      }
+
+      //   Note -> in cear Time OUt isme btn ka pehle reference lenge jiske upr setTimeout lgaya then
+      // jo reference hai vo paas krdege
+
+      // clear Time Out uss function ko execute hone se rokdega hame bss setTtimeOut ka reference paas krna hai
+    </script>
+  </body>
+</html>

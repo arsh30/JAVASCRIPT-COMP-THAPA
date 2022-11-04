@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-div" id="container"></div>
+
+    <script>
+      const container = document.getElementById("container");
+
+      const request = new XMLHttpRequest();
+      request.open("GET", "https://restcountries.com/v3.1/all");
+      request.send(); // request send krri ki hame isska dtaa chaiye
+
+      //   to get the response
+      // means jb page load hoje to hume data mil jana chaiye
+      request.addEventListener("load", function () {
+        // console.log(this.responseText);
+        const [data] = JSON.parse(this.responseText); // parse -> t convert the data into JS Object
+        console.log(data);
+
+        container.innerHTML = `The country is ${data.capital} and their flag is ${data.flag}`;
+      });
+    </script>
+  </body>
+</html>
